@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+          position: absolute;
+        }
+        div {
+            position: relative;
+         
+            height: 95vh;
+            width: 95vw;
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        #btn {
+            height: 60px;
+            width: 60px;
+            border:none;
+            /* padding: 10px; */
+            border: 8px solid olivedrab;
+            outline: none;
+            cursor: pointer;;
+        }#btn:hover{
+            background-color:black;
+            border:8px solid rgb(77, 90, 51) ;
+            border-radius: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div><button id="btn"></button></div>
+<script>
+ let  btn=document.getElementById("btn");
+btn.addEventListener("click",function(){
+let arr=["red","yellow","purple","cyan","black","green","blue"];
+let rn=Math.floor(Math.random()*arr.length);
+ document.body.style.backgroundColor=arr[rn];   
+})
+</script>
+</body>
+
+</html>
